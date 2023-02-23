@@ -21,6 +21,7 @@
         @csrf
         <div class="form-group mb-3">
             <input name="used_code" type="text" class="form-control">
+            <br>
             @error("used_code")
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -29,6 +30,17 @@
             <input type="submit" value="Submit" class="btn btn-primary">
         </div>
     </form>
+
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <img src="{{ asset('assets/gif/its-friday-dancing.gif') }}" alt="free" width="1000">
+        </div>
+        <div class="d-flex justify-content-center mt-5 bg-danger">
+            <a class="link-light" href="{{url('usedcodelist')}}">Kullanılmış Kodlar</a>
+        </div>
+
+    </div>
+
 </div>
 </body>
 </html>

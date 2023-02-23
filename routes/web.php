@@ -47,4 +47,5 @@ Route::post('/', function () {
 
 Route::get('/checkmonitor', [\App\Http\Controllers\DiscountCodeCheckController::class, 'index']);
 Route::post('/code-control', [\App\Http\Controllers\DiscountCodeCheckController::class, 'codeControl']);
+Route::get('/usedcodelist', [\App\Http\Controllers\DiscountCodeCheckController::class, 'usedCodeList']);
 

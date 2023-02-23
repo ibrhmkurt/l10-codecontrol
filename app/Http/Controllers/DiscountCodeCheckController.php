@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CodeRequest;
 use App\Models\Campaign;
 use App\Models\Code;
+use Illuminate\Support\Facades\DB;
+
 
 class DiscountCodeCheckController extends Controller
 {
@@ -32,5 +34,12 @@ class DiscountCodeCheckController extends Controller
         {
             return redirect()->back()->with('error', 'Girmiş olduğunuz kod geçerli değildir.. Başka bir kod denemelisin dostum.');
         }
+    }
+
+    public function usedCodeList()
+    {
+        return view('usedcodelist', [
+            'codes' => DB::table('campaigns')->paginate(15)
+        ]);
     }
 }

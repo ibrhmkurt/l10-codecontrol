@@ -34,7 +34,7 @@
 <br>
 <hr>
 
-@if($discount_codes == null)
+
     <table>
         <thead>
         <tr>
@@ -55,7 +55,6 @@
     <hr>
 
     {{ $discount_codes->links() }}
-@endif
 
 </body>
 </html>

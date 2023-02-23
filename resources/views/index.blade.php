@@ -8,6 +8,13 @@
     <title>Campaign</title>
 </head>
 <body>
+<h1>!! After importing !!</h1>
+<a href="{{ url('/checkmonitor') }}">Click for Checking Code</a>
+
+<br>
+<br>
+<hr>
+
 <h1>Discount Code Csv import</h1>
 
 @if(session('success'))
@@ -27,26 +34,28 @@
 <br>
 <hr>
 
-<table>
-    <thead>
+@if($discount_codes == null)
+    <table>
+        <thead>
         <tr>
             <th>Discount Code</th>
         </tr>
-    </thead>
-    <tbody>
+        </thead>
+        <tbody>
         @foreach($discount_codes as $code)
             <tr>
                 <th>{{$code->discount_code}}</th>
             </tr>
         @endforeach
-    </tbody>
+        </tbody>
 
-</table>
+    </table>
 
-<br>
-<hr>
+    <br>
+    <hr>
 
-{{ $discount_codes->links() }}
+    {{ $discount_codes->links() }}
+@endif
 
 </body>
 </html>

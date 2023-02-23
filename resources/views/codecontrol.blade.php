@@ -10,5 +10,7 @@
 <body>
 <h1>indirim kodunuz doğrulandı</h1>
 <p>Beleş zamanı</p>
+
+<a href="{{ url('/checkmonitor') }}">Beleşe Devamke!!</a>
 </body>
 </html>

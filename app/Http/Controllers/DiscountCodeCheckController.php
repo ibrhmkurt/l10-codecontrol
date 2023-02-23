@@ -30,7 +30,7 @@ class DiscountCodeCheckController extends Controller
         }
         else
         {
-            echo "Girmiş olduğunuz kod geçerli değildir.";
+            return redirect()->back()->with('error', 'Girmiş olduğunuz kod geçerli değildir.. Başka bir kod denemelisin dostum.');
         }
     }
 }

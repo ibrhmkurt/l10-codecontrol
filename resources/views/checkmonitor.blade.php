@@ -12,6 +12,11 @@
     <div class="alert alert-warning mb-4 text-center">
         <h2 class="display-6">Laravel Discount Code Control</h2>
     </div>
+
+    @if(session('error'))
+        <p class="text-danger">{{ session('error') }}</p>
+    @endif
+
     <form method="POST" action="{{ url('/code-control')}}">
         @csrf
         <div class="form-group mb-3">

@@ -45,4 +45,6 @@ Route::post('/', function () {
     return redirect()->back()->with('success', 'All Discount Code imported!!');
 });
 
+Route::get('/checkmonitor', [\App\Http\Controllers\DiscountCodeCheckController::class, 'index']);
+Route::post('/code-control', [\App\Http\Controllers\DiscountCodeCheckController::class, 'codeControl']);
 

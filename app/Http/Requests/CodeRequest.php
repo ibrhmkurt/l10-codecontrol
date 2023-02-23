@@ -11,7 +11,7 @@ class CodeRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,8 +21,21 @@ class CodeRequest extends FormRequest
      */
     public function rules(): array
     {
+        $used_code_id = $this->request->get("id");
         return [
-            //
+            "used_code" => "required|min:7|max:7|unique:App\Models\Campaign,used_code,$used_code_id"
         ];
     }
+
+    public function messages()
+    {
+        return [
+            "used_code.required" => "Lütfen indirim kodunuzu giriniz.",
+            "used_code.min" => "Lütfen 7 karakterli indirim kodunuzu giriniz.",
+            "used_code.max" => "Lütfen 7 karakterli indirim kodunuzu giriniz.",
+            "used_code.unique" => "Girmiş olduğunuz indirim kodu daha önce kullanıldı."
+        ];
+    }
+
 }
+

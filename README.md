@@ -22,3 +22,6 @@
 <li><code>php artisan key:generate</code></li>
 <li><code>php artisan serve</code></li>
 </ol>
+
+
+<p> CSV dosyasını import etmeden önce en üst satıra Code headerını eklemeyi unutmayın!! </p>

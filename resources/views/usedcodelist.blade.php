@@ -11,6 +11,10 @@
 <body>
 
 <div class="container">
+    <div class="alert alert-info mt-2 mb-3 text-center">
+        <a class="link-danger" target="_blank" href="{{ url('/checkmonitor') }}">Click for Checking Code</a>
+    </div>
+
     <div class="container ">
         <div class="d-flex justify-content-center">
             <img src="{{ asset('assets/gif/dr-who-doctor-who.gif') }}" alt="free" width="350">

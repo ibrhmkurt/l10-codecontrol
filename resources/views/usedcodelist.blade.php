@@ -12,7 +12,7 @@
 
 <div class="container">
     <div class="alert alert-info mt-2 mb-3 text-center">
-        <h1>Continue to use code</h1>
+        <h1>Continue to use Code</h1>
         <a class="link-danger" target="_blank" href="{{ url('/checkmonitor') }}">Click for Checking Code</a>
     </div>
 
